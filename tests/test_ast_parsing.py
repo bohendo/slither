@@ -60,7 +60,7 @@ VERSIONS_04 = make_version(4, 0, 26)
 VERSIONS_05 = make_version(5, 0, 17)
 VERSIONS_06 = make_version(6, 0, 12)
 VERSIONS_07 = make_version(7, 0, 6)
-VERSIONS_08 = make_version(8, 0, 15)
+VERSIONS_08 = make_version(8, 0, 17)
 
 ALL_VERSIONS = VERSIONS_04 + VERSIONS_05 + VERSIONS_06 + VERSIONS_07 + VERSIONS_08
 
@@ -407,22 +407,22 @@ ALL_TESTS = [
         "complex_imports/import_free/Caller.sol",
         ["0.8.2"],
     ),
-    Test("custom_error_with_state_variable.sol", make_version(8, 4, 12)),
+    Test("custom_error_with_state_variable.sol", make_version(8, 4, 17)),
     Test("complex_imports/import_aliases/test.sol", VERSIONS_08),
     # 0.8.9 crashes on our testcase
     Test(
-        "user_defined_value_type/user_defined_types-0.8.8.sol", ["0.8.8"] + make_version(8, 10, 15)
+        "user_defined_value_type/user_defined_types-0.8.8.sol", ["0.8.8"] + make_version(8, 10, 17)
     ),
-    Test("user_defined_value_type/argument-0.8.8.sol", ["0.8.8"] + make_version(8, 10, 15)),
-    Test("user_defined_value_type/calldata-0.8.8.sol", ["0.8.8"] + make_version(8, 10, 15)),
-    Test("user_defined_value_type/constant-0.8.8.sol", ["0.8.8"] + make_version(8, 10, 15)),
-    Test("user_defined_value_type/erc20-0.8.8.sol", ["0.8.8"] + make_version(8, 10, 15)),
-    Test("user_defined_value_type/in_parenthesis-0.8.8.sol", ["0.8.8"] + make_version(8, 10, 15)),
-    Test("bytes_call.sol", ["0.8.12"]),
+    Test("user_defined_value_type/argument-0.8.8.sol", ["0.8.8"] + make_version(8, 10, 17)),
+    Test("user_defined_value_type/calldata-0.8.8.sol", ["0.8.8"] + make_version(8, 10, 17)),
+    Test("user_defined_value_type/constant-0.8.8.sol", ["0.8.8"] + make_version(8, 10, 17)),
+    Test("user_defined_value_type/erc20-0.8.8.sol", ["0.8.8"] + make_version(8, 10, 17)),
+    Test("user_defined_value_type/in_parenthesis-0.8.8.sol", ["0.8.8"] + make_version(8, 10, 17)),
+    Test("bytes_call.sol", make_version(8, 12, 17)),
     Test("modifier_identifier_path.sol", VERSIONS_08),
-    Test("free_functions/libraries_from_free.sol", ["0.8.12"]),
-    Test("free_functions/new_operator.sol", ["0.8.12"]),
-    Test("free_functions/library_constant_function_collision.sol", ["0.8.12"]),
+    Test("free_functions/libraries_from_free.sol", make_version(8, 12, 17)),
+    Test("free_functions/new_operator.sol", make_version(8, 12, 17)),
+    Test("free_functions/library_constant_function_collision.sol", make_version(8, 12, 17)),
     Test("ternary-with-max.sol", ["0.8.15"]),
     Test("library_event-0.8.16.sol", ["0.8.16"]),
 ]
