@@ -34,12 +34,9 @@ jobs:
       - name: Install dependencies
         run: |
           pip install ".[dev]"
-          solc-select install 0.5.0
+          solc-select install 0.5.1
+          solc-select install 0.4.25
           solc-select use 0.8.11 --always-install
-
-      - name: Install old solc
-        if: matrix.os == 'ubuntu-latest'
-        run: solc-select install 0.4.0
 
       - name: Test with pytest
         run: |
